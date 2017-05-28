@@ -1,16 +1,28 @@
 <template>
   <div>
-    <div class="show_more__container" :style="{ height: containerHeight + measure }" ref="container">
-      <div>
-        <slot></slot>
-      </div>
+    <div
+      class="show-more__container"
+      :style="{ height: containerHeight + measure }"
+      ref="container"
+    >
+      <slot></slot>
     </div>
 
     <div v-if="initialHeight <= actualHeight">
-      <button v-if="visible === 'more'" :class="[moreBtnClass]" @click.prevent="more"
-              v-html="moreText + moreIcon"></button>
-      <button v-if="visible === 'less'" :class="[lessBtnClass]" @click.prevent="less"
-              v-html="lessText + lessIcon"></button>
+      <button
+        @click.prevent="showMore('more')"
+        :class="[moreBtnClass]"
+        v-if="visible === 'more'"
+        v-html="`${moreIcon} ${moreText}`"
+      >
+      </button>
+      <button
+        @click.prevent="showMore('less')"
+        :class="[lessBtnClass]"
+        v-if="visible === 'less'"
+        v-html="`${lessIcon} ${lessText}`"
+      >
+      </button>
     </div>
   </div>
 </template>
@@ -28,11 +40,11 @@
       },
       moreBtnClass: {
         type: String,
-        default: 'btn btn-primary btn-xs btn-light-frame btn-framed btn-rounded'
+        default: 'button is-primary'
       },
       lessBtnClass: {
         type: String,
-        default: 'btn btn-primary btn-xs btn-light-frame btn-framed btn-rounded'
+        default: 'button is-danger'
       },
       moreText: {
         type: String,
@@ -44,15 +56,13 @@
       },
       moreIcon: {
         type: String,
-        default: '<i class="icon_plus"></i>'
+        default: '<i class="fa fa-plus"></i>'
       },
       lessIcon: {
         type: String,
-        default: '<i class="icon_minus-06"></i>'
+        default: '<i class="fa fa-minus"></i>'
       }
-
     },
-
     data() {
       return {
         containerHeight: this.initialHeight,
@@ -60,29 +70,26 @@
         actualHeight: null
       }
     },
-
     methods: {
-      more() {
-        this.visible = 'less'
-        this.containerHeight = this.$refs.container.childNodes[0].clientHeight
-      },
-      less() {
-        this.visible = 'more'
-        this.containerHeight = this.initialHeight
+      showMore(a) {
+        if (a === 'more') {
+          this.visible = 'less'
+          this.containerHeight = this.$refs.container.childNodes[0].clientHeight
+        }
+        if (a === 'less') {
+          this.visible = 'more'
+          this.containerHeight = this.initialHeight
+        }
       }
     },
-
     mounted() {
       this.actualHeight = this.$refs.container.childNodes[0].clientHeight
     }
   }
 </script>
 
-<style lang="scss">
-  .show_more {
-    &__container {
-      transition: height 500ms;
-      overflow: hidden;
-    }
+<style>
+  .show-more__container {
+    overflow: hidden;
   }
 </style>
