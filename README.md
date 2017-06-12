@@ -6,12 +6,12 @@
 
 ## npm
 ```
-npm install vue2-laravel-pagination --save-dev
+npm install vue-showmore --save-dev
 ```
 ## yarn
 
 ```
-yarn add vue2-laravel-pagination --save-dev
+yarn add vue-showmore --save-dev
 ```
 
 ## Then just import *.vue file and use it
