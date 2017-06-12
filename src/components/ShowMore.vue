@@ -1,26 +1,27 @@
 <template>
-  <div>
+  <div :class="[customMainClass]">
     <div
       class="show-more__container"
+      :class="[customContainerClass]"
       :style="{ height: containerHeight + measure }"
       ref="container"
     >
       <slot></slot>
     </div>
 
-    <div v-if="initialHeight <= actualHeight">
+    <div :class="[customBtnContainer]" v-if="initialHeight <= actualHeight">
       <button
         @click.prevent="showMore('more')"
-        :class="[moreBtnClass]"
+        :class="[moreBtnClass, moreCustomBtnClass]"
         v-if="visible === 'more'"
-        v-html="`${moreIcon} ${moreText}`"
+        v-html="`${moreIcon}&nbsp;${moreText}`"
       >
       </button>
       <button
         @click.prevent="showMore('less')"
-        :class="[lessBtnClass]"
+        :class="[lessBtnClass, lessBtnCustomClass]"
         v-if="visible === 'less'"
-        v-html="`${lessIcon} ${lessText}`"
+        v-html="`${lessIcon}&nbsp;${lessText}`"
       >
       </button>
     </div>
@@ -61,6 +62,26 @@
       lessIcon: {
         type: String,
         default: '<i class="fa fa-minus"></i>'
+      },
+      customMainClass: {
+        type: String,
+        default: 'show-more__main'
+      },
+      customContainerClass: {
+        type: String,
+        default: 'show-more__container--custom'
+      },
+      customBtnContainer: {
+        type: String,
+        default: 'show-more__btn-container'
+      },
+      lessBtnCustomClass: {
+        type: String,
+        default: 'show-more__less-btn-custom'
+      },
+      moreCustomBtnClass: {
+          type: String,
+        default: 'show-more__more-btn-custom'
       }
     },
     data() {
@@ -90,6 +111,7 @@
 
 <style>
   .show-more__container {
+    transition: height ease .3s;
     overflow: hidden;
   }
 </style>

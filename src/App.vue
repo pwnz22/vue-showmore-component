@@ -8,6 +8,15 @@
           Rem nemo ab reprehenderit, natus, blanditiis sint non.
           Cupiditate alias et quaerat perferendis,
           fugit beatae possimus quidem necessitatibus, suscipit officia animi odit.
+          Rem nemo ab reprehenderit, natus, blanditiis sint non.
+          Cupiditate alias et quaerat perferendis,
+          fugit beatae possimus quidem necessitatibus, suscipit officia animi odit.
+          Rem nemo ab reprehenderit, natus, blanditiis sint non.
+          Cupiditate alias et quaerat perferendis,
+          fugit beatae possimus quidem necessitatibus, suscipit officia animi odit.
+          Rem nemo ab reprehenderit, natus, blanditiis sint non.
+          Cupiditate alias et quaerat perferendis,
+          fugit beatae possimus quidem necessitatibus, suscipit officia animi odit.
         </p>
       </show-more>
     </div>
@@ -27,14 +36,13 @@
 
 <style>
   .description {
-    width: 100px;
+    width: 300px;
     margin: 0 auto;
   }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
     margin-top: 60px;
   }
