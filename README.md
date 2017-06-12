@@ -1,21 +1,34 @@
-# showmore
+# Showmore
 
 > Showmore vuejs component
 
-## Build Setup
+## Installation
 
-``` bash
-# install dependencies
-npm install
+## npm
+```
+npm install vue2-laravel-pagination --save-dev
+```
+## yarn
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+```
+yarn add vue2-laravel-pagination --save-dev
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Then just import *.vue file and use it
+
+```
+import ShowMore from './components/ShowMore'
+```
+
+```
+<show-more>
+  <p>
+    Lorem ipsum dolor sit amet,
+    consectetur adipisicing elit.
+    Rem nemo ab reprehenderit, natus, blanditiis sint non.
+    Cupiditate alias et quaerat perferendis,
+    fugit beatae possimus quidem necessitatibus, suscipit officia animi odit.
+    Rem nemo ab reprehenderit, natus, blanditiis sint non.
+  </p>
+</show-more>
+```

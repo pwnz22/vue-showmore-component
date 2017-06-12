@@ -9,14 +9,6 @@
           Cupiditate alias et quaerat perferendis,
           fugit beatae possimus quidem necessitatibus, suscipit officia animi odit.
           Rem nemo ab reprehenderit, natus, blanditiis sint non.
-          Cupiditate alias et quaerat perferendis,
-          fugit beatae possimus quidem necessitatibus, suscipit officia animi odit.
-          Rem nemo ab reprehenderit, natus, blanditiis sint non.
-          Cupiditate alias et quaerat perferendis,
-          fugit beatae possimus quidem necessitatibus, suscipit officia animi odit.
-          Rem nemo ab reprehenderit, natus, blanditiis sint non.
-          Cupiditate alias et quaerat perferendis,
-          fugit beatae possimus quidem necessitatibus, suscipit officia animi odit.
         </p>
       </show-more>
     </div>
