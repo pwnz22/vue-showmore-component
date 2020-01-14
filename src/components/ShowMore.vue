@@ -32,7 +32,7 @@
   export default {
     props: {
       initialHeight: {
-        type: Number,
+        type: [Number, String],
         default: 70
       },
       measure: {
@@ -49,11 +49,11 @@
       },
       moreText: {
         type: String,
-        default: 'More'
+        default: 'more'
       },
       lessText: {
         type: String,
-        default: 'Less'
+        default: 'less'
       },
       moreIcon: {
         type: String,
@@ -104,7 +104,9 @@
       }
     },
     mounted() {
-      this.actualHeight = this.$refs.container.childNodes[0].clientHeight
+      this.$nextTick(() => {
+        this.actualHeight = this.$refs.container.childNodes[0].clientHeight
+      })
     }
   }
 </script>

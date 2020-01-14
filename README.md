@@ -1,34 +1,34 @@
-# Showmore
+# vue-showmore
 
-> Showmore vuejs component
-
-## Installation
-
-## npm
+## Project setup
 ```
-npm install vue-showmore --save-dev
-```
-## yarn
-
-```
-yarn add vue-showmore --save-dev
+yarn install
 ```
 
-## Then just import *.vue file and use it
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
 
+### Compiles and minifies for production
 ```
-import ShowMore from './components/ShowMore'
+yarn run build
 ```
 
+### Run your tests
 ```
-<show-more>
-  <p>
-    Lorem ipsum dolor sit amet,
-    consectetur adipisicing elit.
-    Rem nemo ab reprehenderit, natus, blanditiis sint non.
-    Cupiditate alias et quaerat perferendis,
-    fugit beatae possimus quidem necessitatibus, suscipit officia animi odit.
-    Rem nemo ab reprehenderit, natus, blanditiis sint non.
-  </p>
-</show-more>
+yarn run test
 ```
+
+### Lints and fixes files
+```
+yarn run lint
+```
+
+### Run your unit tests
+```
+yarn run test:unit
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
